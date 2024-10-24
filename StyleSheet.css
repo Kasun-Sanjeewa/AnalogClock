@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: red;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://img.freepik.com/premium-photo/simple-elegant-background_1258715-150067.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.Clock-border {
+    background-color: #fafaf8;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 500px;
+    height: 800px;
+    position: relative;
+    gap: 10px;
+
+}
+
+.Clock {
+    background-color: #051b28;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.Clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.Clock span b {
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.Clock::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #fcfcfb;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #00ffff;
+    z-index: 2;
+}
+
+.hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i {
+    width: 4px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 7px #00ffff;
+}
+
+#hour i {
+    height: 95px;
+    width: 4px;
+    background-color: #00ffff;
+}
+
+#min i {
+    height: 115px;
+    width: 4px;
+    background-color: #00ffff;
+}
+
+#sec i {
+    height: 118px;
+    width: 2px;
+    background-color: #fcfcfb;
+    box-shadow: none;
+}
+
+/* Time Info Section */
+.time-info p {
+    margin: 12px;
+    font-size: 20px;
+    color: #333;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#local-time {
+    font-weight: bold;
+}
+
+.time-info b {
+    color: #333;
+}
+
+/* City Times */
+.city-time {
+    width: 100%;
+    text-align: left;
+    margin-top: 40px;
+    font-size: 15px;
+    color: #555;
+}
+
+.city-time div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    margin: 10px;
+}
+
+/* Add City Button */
+.add-city-btn {
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 18px;
+    color: white;
+    background-color: #00aaff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+
+
+}
+
+.add-city-btn b {
+    color: white;
+}
+
+.add-city-btn:hover {
+    background-color: #007acc;
+}
